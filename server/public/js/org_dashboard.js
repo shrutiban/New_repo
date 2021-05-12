@@ -39,7 +39,8 @@ $(document).ready( function() {
       for(let i = 0; i < vids.length; i++){
         let div = document.createElement("div");
         let h3 = document.createElement("h3");
-        h3.innerHTML = vids[i].name + "<span class='entypo-down-open'></span>";
+        h3.innerHTML = vids[i].name + "<span class='entypo-down-open'></span><br>";
+        h3.innerHTML += vids[i].author + "<span class='entypo-down-open'></span>";
         div.appendChild(h3);
         let iframe = document.createElement('iframe');
         iframe.setAttribute('width', '640');
@@ -136,7 +137,7 @@ function submit_video()
       console.log(videosArticle);
       let div = document.createElement("div");
       let h3 = document.createElement("h3");
-      h3.innerHTML = res.name+ "<span class='entypo-down-open'></span>";
+      h3.innerHTML = res.author+ "<span class='entypo-down-open'></span>";
       div.appendChild(h3);
       let iframe = document.createElement('iframe');
       iframe.setAttribute('width', '640');

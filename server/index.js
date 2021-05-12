@@ -11,7 +11,7 @@ const chalk = require('chalk');
 require('dotenv').config();
 
 // connect to db
-mongoose.connect("mongodb+srv://shrutibansal:pNMmGTIc4IcFPBwz@cluster0.jcglz.mongodb.net/female?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://mongodb:mongodb@cluster0.jo8ol.mongodb.net/testing?retryWrites=true&w=majority",
 {
 	useNewUrlParser: true
 }).then(

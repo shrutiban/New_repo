@@ -15,7 +15,11 @@ const videosSchema = mongoose.Schema({
 	description: {
 		type: String
 	},
-	postedBy: {
+	postedByID: {
+		type: String,
+		required: true
+	},
+	postedByName: {
 		type: String,
 		required: true
 	},
