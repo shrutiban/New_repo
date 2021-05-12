@@ -31,6 +31,11 @@ app.use(express.urlencoded({
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+app.get('/donation', (req, res) => {
+	console.log(chalk.green('GET ' + chalk.blue('/donation')));
+	res.status(200).render('donate.ejs');
+});
+
 app.get('/', (req, res, next) => {
 		if (!req.cookies.ngotok) return next();
 		auth.direct(res, next, req.cookies.ngotok);
@@ -58,5 +63,6 @@ app.use((req, res, next) => {
 	console.log(chalk.yellow('Undefined route: ' + req.method + ' ' + req.originalUrl));
 	res.status(404).render('404.ejs');
 });
+
 
 module.exports = app;

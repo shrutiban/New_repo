@@ -52,6 +52,12 @@ $(document).ready( function() {
         a.setAttribute('href', '/person/video/' + encodeURIComponent(vids[i].link));
         a.innerHTML = 'Open this video with discussions';
         div.appendChild(a);
+        let donateBtn = document.createElement("button");
+        donateBtn.id = "donateBtn";
+        donateBtn.className = "donateBtn";
+        donateBtn.innerHTML="DONATE";
+        donateBtn.addEventListener('click',click_donate,false);
+        div.appendChild(donateBtn);
         videosArticle.appendChild(div);
       }
     }
@@ -170,6 +176,10 @@ function delete_video(e)
   });
 }
 
+function click_donate(e){
+  window.location.href = "/donation"
+}
+
 function add_videos() {
   var videos = document.getElementById("addVideos");
   videos.style.display = "block";
@@ -235,3 +245,4 @@ function show_profile() {
   var profile = document.getElementById("profile");
   profile.style.display = "block";
 }
+
